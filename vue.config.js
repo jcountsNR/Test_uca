@@ -1,6 +1,5 @@
 module.exports = {
-  transpileDependencies: [
-    'vuetify'
-  ],
-  publicPath: "/uca_vue/"
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/uca_vue/'
+    : '/'
 }
