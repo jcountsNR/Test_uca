@@ -5,6 +5,7 @@ import Contactus from '../views/contactus.vue'
 import About from '../views/About.vue'
 import Apparel from '../views/apparel.vue'
 import convention from '../views/convention.vue'
+import basketball from '../views/basketball.vue'
 
 Vue.use(VueRouter)
 
@@ -49,7 +50,12 @@ const routes = [
       path: '/convention',
       name: 'convention',
       component: convention
-        }
+        },
+    {
+      path: '/basketball',
+      name: 'basketball',
+      component: basketball
+      }
   
 ]
 
