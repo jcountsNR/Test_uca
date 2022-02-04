@@ -45,10 +45,7 @@ const routes = [
       path: '/basketball',
       name: 'basketball',
       component: basketball
-      }
-
-    component: about
-  },
+      },
   {
     path: '/apparel',
     name: 'apparel',
