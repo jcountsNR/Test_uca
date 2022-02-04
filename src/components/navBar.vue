@@ -1,15 +1,14 @@
  <template>
- <div class="Nav">
+<div>
         <v-app-bar
       app
-      color="green darken-3"
       dark
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
       src="@/assets/images/blocks.jpg"
           >
           
-    <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
  
       <router-link to="/home"
        tag="button" 
@@ -29,85 +28,129 @@
              <v-spacer />
              
     </v-app-bar>
-             <v-navigation-drawer
-             v-model="drawer"
-             absolute
-             temporary
-             src="@/assets/images/blocks.jpg" 
-             >
-               <v-list
-                  nav
-                  dense
-                  color="green darken-3">
-                 <v-list-item-group
-                 v-model="group"
-                 active-class="text--accent-4"
-                 dark
-                                 
-                 >
-                 <v-list-item to="/home" class="d-flex align-center" text-color="white">              
-        <div class="fa fa-home mr-2"/>
-          Home
-                       </v-list-item>
-                 <v-list-item to="/registration" class="d-flex align-center" text-color="white">
-                     <div class="fa fa-pencil-square-o mr-2" />
-                      Registration
-                       </v-list-item>
-<v-list-item to="/academics" class="d-flex align-center" text-color="white">
-              <div class="fa fa-book mr-2" />
-              Academics
-           </v-list-item >
-<v-list-item to="/athletics" class="d-flex align-center" text-color="white">
-              <div class="fa fa-soccer-ball-o mr-2" />
-               Athletics
-            </v-list-item>
+    <v-navigation-drawer
+    v-model="drawer"
+    absolute
+    temporary
+    app
+    color="green darken-4"
+    >
+      <v-list nav dense style="margin-top:1em;">
+          <div v-for="(link, i) in links" :key="i">
 
-<v-list-item to="/apparel" class="d-flex align-center" text-color="white">
-<div class="fa fa-shirtsinbulk mr-2" />
-            Apparel
-           </v-list-item>
-<v-list-item to="/convention" class="d-flex align-center" text-color="white">
-              <div class="fa fa-group mr-2" />
-              Convention
+              <v-list-item
+                  v-if="!link.subLinks"
+                  :to="link.to"
+                  avatar
+                  class="v-list-item"
+                  :name="link.name"
+              >
+              <v-list-item-icon >
+                <v-icon color="white">{{ link.icon }}</v-icon>
+            </v-list-item-icon>
+
+                  <v-list-tile-title class="navtext" v-text="link.name"/>
               </v-list-item>
-<v-list-item to="/contactus" class="d-flex align-center" text-color="white">
-             <div class="fa fa-user-circle mr-2" />
-              Contact Us
-           </v-list-item>
-<v-list-item to="/about" class="d-flex align-center " text-color="white">
-              <div class="fa fa-file-text-o mr-2" />
-               About
-               </v-list-item>  
-      
-<v-list-item  to="/jobs" class="d-flex align-center" text-color="white">
-               <div class="fa fa-briefcase mr-2" />
-              Jobs
-           </v-list-item>
-                 </v-list-item-group>
-               </v-list>
-               <v-spacer />
+
+              <v-list-group
+                  v-else
+                  :key="link.name"
+                  no-action
+                  :value="false"
+              >
+                  <template v-slot:activator>
+                    <v-list-item-icon>
+                      <v-icon color="white">{{ link.icon }}</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title class="navtext" v-text="link.name" style="font-size:1.5em"/>
+                  </template>
+
+                  <v-list-item
+                      v-for="sublink in link.subLinks"
+                      :to="sublink.to"
+                      :key="sublink.name"
+                      avatar
+                  >
+                      <v-list-item-icon >
+                         <v-icon color="white">{{ sublink.icon }}</v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-title class="navtext" v-text="sublink.name" style="font-size:1.5em"/>
+                  </v-list-item>
+
+              </v-list-group>
+
+          </div>
+      </v-list>
                
   
-             </v-navigation-drawer>
+  </v-navigation-drawer>
 
  </div>
-        
-     
-    
+
 </template> 
 
 
 
 <script>
-
-
 export default {
   name: "navbar",
   data: () => ({
   drawer: false,
   group: null,
-   
+  links : [
+    {
+      to   : '/home',
+      name : 'Home',
+      icon : 'fa-home'
+    },
+    {
+      to   : '/contactus',
+      name : 'Contact Us',
+      icon : 'fa-address-card'
+    },
+    {
+      to   : '/about',
+      name : 'About',
+      icon : 'fa-school',
+    },
+    {
+      to   : '/apparel',
+      name : 'Apparel',
+      icon : 'fa-tshirt',
+    },
+    {
+      to   : '/convention',
+      name : 'Convention',
+      icon : 'fa-hotel',
+    },
+    {
+      to   : '/athletics',
+      name : 'Athletics',
+      icon : 'fa-running',
+      subLinks : [
+        {
+            to   : '/basketball',
+            name : 'Basketball',
+            icon : 'fa-basketball-ball'
+        },
+        {
+            to   : '/volleyball',
+            name : 'Volleyball',
+            icon : 'fa-volleyball-ball'
+        },
+      ]
+    },
+  ]   
     })
   }
 
 </script>
+
+<style>
+.navtext {
+  font-size: 2em;
+  color: white;
+  text-shadow:2px 2px black;  
+}
+</style>
