@@ -11,6 +11,7 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(VueMaterial)
+Vue.use(vuetify)
 
 library.add(faUserSecret)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
