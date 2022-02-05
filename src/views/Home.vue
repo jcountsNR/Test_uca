@@ -6,7 +6,7 @@
         <v-col >
       <v-card class="mx-auto pa-1 align-content homepage" elevation="6" >
         <expandable-image  
-           :src="require('../assets/images/Website_Photo_Homepage.jpg')"
+           :src="require('../assets/images/2017.jpg')"
            class="image "
            :class="{ expanded }"
            @click="expanded = true"
@@ -114,10 +114,10 @@
 
      </v-col>
       </v-row>
-    
+    <v-divider class="mt-7"/>
 <v-container class="backsplash mt-4 mx-12">
   <v-row class="center">
-  <div class="title ">Schedules</div>
+  <div class="ucaheader">Schedules</div>
   </v-row>
   <v-row class="center">
   <div class="subtitle">* PLEASE NOTE:  The schedules below are tentative only.  There may be some changes to this schedule prior to the first day of school.</div>
@@ -129,19 +129,34 @@
   <v-row no-gutters>
 
   <v-col cols="6" >
-    <v-card class="ma-4 center" elevation="6" cols="6"  max-width="500px" >
-      <expandable-image
-      label="Tuesday Schedule" 
-      :src="require('../assets/images/tuesday_schedule.jpg')" 
-      max-height="175"
-      class="center"
-      contain
-      />
+    <v-hover v-slot="{ hover }">
+    <v-card
+            :elevation="hover ? 12 : 2"            
+            contain
+            class="mx-10"             
+    >
+        <v-card class="ma-4 center" elevation="6" cols="6"  max-width="500px" >
+          <expandable-image
+          label="Tuesday Schedule" 
+          :src="require('../assets/images/tuesday_schedule.jpg')" 
+          max-height="200"
+          class="center"
+          contain
+          />
     </v-card>
+    </v-card>
+    </v-hover>
+    
    </v-col>
     
     
-   <v-col cols="6">
+   <v-col cols="6" >
+     <v-hover v-slot="{ hover }">
+    <v-card
+            :elevation="hover ? 12 : 2"            
+            contain
+            class="mx-10"            
+    >
      <v-card class="ma-4 center" elevation="6" cols="6" max-width="450px">
       <expandable-image
         :src="require('../assets/images/Thursday_Schedule.jpg')" 
@@ -149,15 +164,25 @@
         class="center"
         contain
         />   
-    </v-card>   
+    </v-card>  
+    </v-card>
+     </v-hover> 
    </v-col>
 </v-row>
 </v-container>
 
-<v-btn height="30px" width="30px" contain icon  >
-  <v-img src="@/assets/images/fb.jpg" contain height="30px" width="36px" class=" border" @click="facebook()"/>
-</v-btn>
-
+<v-hover v-slot="{ hover }">
+  <v-card
+            :elevation="hover ? 12 : 2"
+            height="30px" width="30px"
+            contain
+            icon
+          >
+      <v-btn height="30px" width="30px" contain icon  >
+      <v-img src="@/assets/images/fb.jpg" contain height="30px" width="36px" class=" border" @click="facebook()"/>
+      </v-btn>
+  </v-card>
+</v-hover>
 
     </div>
 </template>
@@ -213,8 +238,5 @@ export default {
   justify-content: center;
 }
 
-.homepage {
-  max-width: 625px;
-  min-width: 300px;
-}
+
 </style>

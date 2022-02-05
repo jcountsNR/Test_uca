@@ -222,8 +222,7 @@ export default {
           src: images('./3906.jpg')
         }
 
-],     
-       
+],           
       
          qty: [
           0,

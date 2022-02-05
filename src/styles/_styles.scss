@@ -1,5 +1,6 @@
 html > body {
     margin: 0 !important;
+    font: large Tahoma; 
   }
   .main-section {
     padding: 1rem 1rem;
@@ -8,48 +9,75 @@ html > body {
       color: darkgreen;
       font-weight: bold;
   }
-  .title {
-    font-size: 1.5em;
+  .ucatitle {
     display: flex;
     align-items: center;
     justify-content: center;
     color: darkgreen;
     font-weight: bold;
-    text-shadow: 2px 1px 2px grey;
-        
+    text-shadow: 2px 1.5px 2px darkgrey;
+    font-size: 3em !important;
+    margin-bottom: 1em;
+  }
+  .ucaheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkgreen;
+    font-weight: bold;
+    text-shadow: 1.8px 1px 1.8px darkgrey;
+    font-size: 2em !important;
+  }
+  .ucaheader1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkgreen;
+    font-weight: bold;
+    text-shadow: 1px .8px 1px darkgrey;
+    font-size: 1.5em !important;
   }
   .navheader {
       font-size: 30px;
       text-shadow: 2px 2px 2px black;
       font-family: Gill Sans;
         }
-        .backsplash {
-                     background-color:ghostwhite;
-        }
-        .border {
-            border-radius: 8px;
-        }
-        .rightalign {
-            position: absolute;
-            float:right;
-        }
-        .subtitle {
-            font-size: 13px;
-            font-style: italic;
-            font-family: Calibri;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        th {
-          font-weight: bold;
-        }
-        .button {
-          color: darkgreen;
-          float: right;
-                }
+  .backsplash {
+                background-color:ghostwhite;
+  }
+  .border {
+      border-radius: 8px;
+  }
+  .rightalign {
+      position: absolute;
+      float:right;
+  }
+  .subtitle {
+      font-size: 13px;
+      font-style: italic;
+      font-family: Calibri;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  th {
+    font-weight: bold;
+  }
+  .button {
+    color: darkgreen;
+    float: right;
+          }
+  .paragraph {
+    font-size: large !important;
+    font-family:Tahoma;
+    background-color:#F6F6F6;
+  }
+  .text {
+    font-size: medium !important;
+    font-family: Tahoma;
+  }        

@@ -1,22 +1,22 @@
 <template>
   <div class="convention">
     <v-container >
-      <title class="title center">
+      <title class="ucatitle center">
       {{statement}}
       </title>
      </v-container>
     <v-divider />
     <v-container>
-      <title class="title">
+      <title class="ucaheader1">
         About Convention
       </title>
-      <v-card-text>
+      <v-card-text class="paragraph">
         {{about}}
       </v-card-text>
     </v-container>
     <v-row>
         <v-col cols="6">
-            <v-card-text class="title center">
+            <v-card-text class="ucaheader1">
                 Solo Events
             </v-card-text>           
             
@@ -53,13 +53,13 @@
      </v-card>
   </v-row>
   <v-row>
-      <v-card-text class="center">
+      <v-card-text class="center text">
         Students can enter a variety of solo events & competitions.
       </v-card-text>
   </v-row>
         </v-col>
        <v-col cols="6">
-            <v-card-text class="title center">
+            <v-card-text class="ucaheader1">
                 Music/Small Group Events
             </v-card-text>           
             
@@ -96,7 +96,7 @@
      </v-card>
   </v-row>
   <v-row>
-      <v-card-text class="center">
+      <v-card-text class="center text">
         Students can enter a variety of music/small group events & competitions.
       </v-card-text>
   </v-row>
@@ -106,7 +106,7 @@
     </v-row>
      <v-row>
         <v-col cols="12">
-            <v-card-text class="title center">
+            <v-card-text class="ucaheader1">
                 Group Events
             </v-card-text>           
             
@@ -143,7 +143,7 @@
      </v-card>
   </v-row>
   <v-row>
-      <v-card-text class="center">
+      <v-card-text class="center text">
         Students can enter a variety of group events, and win awards.
       </v-card-text>
   </v-row>

@@ -11,14 +11,14 @@
     >
       <v-btn
         v-for="link in links"
-        :key="link"
+        :key="link.name"
         color="white"
         text
         rounded
         class="my-0"
-        :to="link"
+        :to="link.link"
       >
-        {{ link }}
+        {{ link.name }}
       </v-btn>
       <v-col
         class="green darken-4 py-1 text-center white--text"
@@ -35,14 +35,25 @@
 <script>
   export default {
     data: () => ({
-      links: [
-        'Home',
-        'About Us',
-        'Registration',
-        'Policy',
-        'Jobs',
-        'Contact Us',
-      ],
+      links: [{
+        name: 'Home',
+        link: 'home'
+      },{
+        name: 'About Us',
+        link: 'about'
+      },{
+        name: 'Registration',
+        link: 'registration'
+      },{
+        name: 'School Policy',
+        link: 'policy'
+      },{
+        name: 'Jobs',
+        link: 'jobs',
+      },{
+        name: 'Contact Us',
+        link: 'contactus'
+      }],
     }),
     name: "footer"
   }
