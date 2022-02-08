@@ -11,6 +11,7 @@
                     v-for="(item, i) in items"
                     :key="i"
                     cols="12"
+                    class="mb-2"
                     >
                     <v-list-item>
                         
@@ -23,17 +24,25 @@
                             <v-card-text class="text">
                                 <v-row>
                                 <v-col cols="3">
-                                    <span style="font-weight:bold"> Phone number: </span>
+                                    <span style="font-weight:bold" v-if="item.phone"> Phone number: </span>
                                 </v-col> 
                                 <v-col class="mr-auto"> {{item.phone}} </v-col>                          
                                 </v-row>
                             </v-card-text>
-                            <v-card-text class="text">
+                            <v-card-text class="text" v-if="item.line1">
                                 <v-row>
                                 <v-col cols="3">
                                     <span style="font-weight:bold"> Address: </span>
                                 </v-col> 
                                 <v-col class="mr-auto"> {{item.line1}} <br /> {{item.line2}}  </v-col>                          
+                                </v-row>
+                            </v-card-text>
+                            <v-card-text class="text" v-if="item.mail1">
+                                <v-row>
+                                <v-col cols="3">
+                                    <span style="font-weight:bold"> Mailing Address: </span>
+                                </v-col> 
+                                <v-col class="mr-auto"> {{item.mail1}} <br /> {{item.mail2}}  </v-col>                          
                                 </v-row>
                             </v-card-text>
                             <v-card-text class="text" v-if="item.email">
@@ -64,14 +73,14 @@ export default {
             name: 'United Christian Academy',
             phone: '615-485-2116',
             line1: '773 McMurry Blvd',
-            line2: 'Hartsville TN, 37074'
+            line2: 'Hartsville TN, 37074',            
+            mail1: '1509 Park Circle',
+            mail2: 'Lafayette, TN  37083',
         },
         principal: {
             name: 'School Principal',
             description: 'Jeremy Counts',
             phone: '615-388-9732',
-            line1: '1509 Park Circle',
-            line2: 'Lafayette, TN  37083',
             email: 'joseph.counts@jcuconsulting.org'            
         },
         volleyball: {

@@ -88,11 +88,12 @@
                 :items="qty"
                 label="Quantity"
                 outlined
+                v-model="qty"
                 ></v-select>
               </v-col>
           </td>
           <td>
-            <v-btn @click="addToCart(item)" id="addToCartBtn">
+            <v-btn @click="addToCart(qty)" id="addToCartBtn">
               Add
             </v-btn>
           </td>
@@ -102,21 +103,17 @@
            </v-simple-table>
 </template>
 <script>
-import '../data/store.js'
 const images = require.context('../assets/merch/', true)
-const cart = [{
-          id: null,
-
-}]
-
 export default {
     data() {
-      const colors= [     '',
+      const colors= [
+          '',
           'Blue',
           'Gray',
           'Green',
           'Black',
-          'White'];
+          'White'
+          ];
 
       const sizes= [
               '',
@@ -220,9 +217,7 @@ export default {
           size: sizes,
           color: colors,
           src: images('./3906.jpg')
-        }
-
-],           
+        }],     
       
          qty: [
           0,
@@ -232,13 +227,25 @@ export default {
           4,
           5
         ],
+        cart: null,
         }
     },
 
+fetchCart() {
+  this.$commerce.cart.retrieve().then((cart) =>{
+    this.cart = cart;
+  }).catch((error) => {
+    console.log('There is an error fetching the cart', error);
+  });
+},
+created() {
+  this.fetchProducts();
+  this.fetchCart();
+},
+
 methods: {
   addToCart() {
-    this.selectedItem += cart,
-    console.log('this is in the cart:' +cart)
+    this.$emit('add-to-cart', this.product.id, 1);
   }
 },
    

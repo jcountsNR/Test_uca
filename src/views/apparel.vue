@@ -54,8 +54,6 @@
 <script>
 import Table from '../components/apparelTable.vue'
 
-
-
   export default {
     
     data: () => ({

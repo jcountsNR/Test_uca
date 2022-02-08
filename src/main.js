@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueExpandableImage from 'vue-expandable-image'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import VuePdfEmbed from 'vue-pdf-embed' 
 
 Vue.use(VueMaterial)
 Vue.use(vuetify)
@@ -23,6 +24,7 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  VuePdfEmbed,
   VueExpandableImage,
   vuetify,
   render: h => h(App)

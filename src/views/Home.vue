@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 <!--         WEBSITE IMAGE       -->
-   
+   <div class="ucatitle"> United Christian Acadamy Homepage</div>
       <v-row no-gutters class="row collapse">
         <v-col >
       <v-card class="mx-auto pa-1 align-content homepage" elevation="6" >
@@ -120,7 +120,7 @@
   <div class="ucaheader">Schedules</div>
   </v-row>
   <v-row class="center">
-  <div class="subtitle">* PLEASE NOTE:  The schedules below are tentative only.  There may be some changes to this schedule prior to the first day of school.</div>
+  <div class="subtitle" cols="10">* PLEASE NOTE:  The schedules below are tentative only.  There may be some changes to this schedule prior to the first day of school.</div>
   </v-row>
 </v-container>
 
@@ -133,13 +133,13 @@
     <v-card
             :elevation="hover ? 12 : 2"            
             contain
-            class="mx-10"             
+            max-width="705px"           
     >
-        <v-card class="ma-4 center" elevation="6" cols="6"  max-width="500px" >
+        <v-card class="ma-4 center" elevation="6" cols="6"  max-width="700px" >
           <expandable-image
           label="Tuesday Schedule" 
           :src="require('../assets/images/tuesday_schedule.jpg')" 
-          max-height="200"
+          max-height="250px"
           class="center"
           contain
           />
@@ -157,7 +157,7 @@
             contain
             class="mx-10"            
     >
-     <v-card class="ma-4 center" elevation="6" cols="6" max-width="450px">
+     <v-card class="ma-4 center" elevation="6" cols="6" max-width="700px" >
       <expandable-image
         :src="require('../assets/images/Thursday_Schedule.jpg')" 
         max-height="175"
