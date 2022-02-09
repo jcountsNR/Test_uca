@@ -6,9 +6,9 @@ import about from '../views/about.vue'
 import apparel from '../views/apparel.vue'
 import convention from '../views/convention.vue'
 import basketball from '../views/basketball.vue'
-import test from '../views/test.vue'
 import policy from '../views/policy.vue'
 import jobs from '../views/jobs.vue'
+import elementary from '../views/elementary.vue'
 
 Vue.use(VueRouter)
 
@@ -17,80 +17,44 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
-
-  },
-  {
+  },  {
     path: '/home',
     name: 'home',
     component: Home
-  },
-  {
+  },  {
     path: '/contactus',
     name: 'contact',
     component: contact
-  },
-  {
+  },  {
     path: '/about',
     name: 'about',
     component: about
-      }  ,
-    {
-      path: '/apparel',
-      name: 'apparel',
-      component: apparel
-        } ,
-    {
-      path: '/convention',
-      name: 'convention',
-      component: convention
-        },
-    {
-      path: '/basketball',
-      name: 'basketball',
-      component: basketball
-      },
-  {
+  },  {
     path: '/apparel',
     name: 'apparel',
     component: apparel
-  },
-  {
+  },  {
     path: '/convention',
     name: 'convention',
     component: convention
-  },
-  {
-    path: '/test',
-    name: 'test',
-    component: test
-  },
-  {
-    path: '/cart/',
-    name: 'Cart',
-    component: () => import('../views/Cart.vue')
-  },
-  {
-    path: '/products',
-    name: 'Products',
-    component: () => import('../views/Products.vue')
-  },{
+  },  {
+    path: '/basketball',
+    name: 'basketball',
+    component: basketball
+  },  {
     path: '/policy',
     name: 'Policy',
     component: policy
-  },{
+  },  {
     path: '/jobs',
     name: 'Jobs',
     component: jobs
-  },{
-    path: '/products/:id/',
-    name: 'Product',
-    component: () => import('../views/Product.vue'),
-    props (route) {
-      const props = { ...route.params };
-      props.id = +props.id;
-      return props
-    }
-  }]
+  },  {
+    path: '/elementary',
+    name: 'Elementary',
+    component: elementary
+  }
+]
 
 const router = new VueRouter({
   mode: 'history',

@@ -12,7 +12,7 @@
  
       <router-link to="/home"
        tag="button" 
-       class="d-flex align-center font-weight-bold text-large "  
+       class="d-flex ml-5 align-center font-weight-bold text-large "  
        text-color="white"
               >
                 <v-img
