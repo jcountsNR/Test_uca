@@ -1,18 +1,32 @@
+
 <template>
-    <vue-pdf-embed id='policy' :source="pdfSource" />
+  <div id="policy">
+    <WebViewer initialDoc="../assets/policy.pdf"
+    />
+  </div>
 </template>
 
 <script>
-import VuePdfEmbed from 'vue-pdf-embed' 
+import WebViewer from "@/components/WebViewer.vue";
 export default {
-    name: 'policy',
+  name: "policy",
   components: {
-    VuePdfEmbed,
+    WebViewer,
   },
- data() {
-    return {
-        pdfSource: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf'
-    }
-}
-}
+};
 </script>
+
+<style>
+html,
+body {
+  margin: 0;
+}
+#policy {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0 auto;
+}
+</style>

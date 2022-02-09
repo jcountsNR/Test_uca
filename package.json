@@ -12,6 +12,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@pdftron/webviewer": "^8.2.0",
+    "@vue/composition-api": "^1.4.6",
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",

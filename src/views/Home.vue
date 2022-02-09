@@ -3,12 +3,13 @@
 <!--         WEBSITE IMAGE       -->
    <div class="ucatitle"> United Christian Acadamy Homepage</div>
       <v-row no-gutters class="row collapse">
-        <v-col >
-      <v-card class="mx-auto pa-1 align-content homepage" elevation="6" >
+        <v-col md="8" sm="12" xs="10" max-height="750" xl="6">
+      <v-card 
+      class="mx-auto pa-1 align-content homepage image" 
+      elevation="6"  >
         <expandable-image  
            :src="require('../assets/images/2017.jpg')"
            class="image "
-           :class="{ expanded }"
            @click="expanded = true"
            >
            <i
@@ -37,13 +38,13 @@
       </v-col>
        
       
-     <v-col >
+     <v-col md="4" sm="12" xs="12">
               
   <v-card
     class="mx-auto align-content"
-    max-width="320"
     outlined
     elevation="6"
+    max-width="325"
       >
    
     <v-list-item three-line>
@@ -115,7 +116,7 @@
      </v-col>
       </v-row>
     <v-divider class="mt-7"/>
-<v-container class="backsplash mt-4 mx-12">
+<v-container class="backsplash mt-4 mx-auto">
   <v-row class="center">
   <div class="ucaheader">Schedules</div>
   </v-row>
@@ -128,7 +129,7 @@
 <v-container >
   <v-row no-gutters>
 
-  <v-col cols="6" >
+  <v-col sm="6" xs="12" >
     <v-hover v-slot="{ hover }">
     <v-card
             :elevation="hover ? 12 : 2"            
@@ -150,7 +151,7 @@
    </v-col>
     
     
-   <v-col cols="6" >
+   <v-col sm="6" xs="12" >
      <v-hover v-slot="{ hover }">
     <v-card
             :elevation="hover ? 12 : 2"            
@@ -236,6 +237,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.image {
+  max-height: 100% !important;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 

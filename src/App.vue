@@ -5,7 +5,6 @@
 
     <v-main class="mb-12">
    <router-view class=" ma-8"/>
-      
     </v-main>
        <br/>
     <Footer  />
@@ -22,7 +21,7 @@ export default {
 
   components: {
     Navbar,
-    Footer    
+    Footer  
   },
   
 };
