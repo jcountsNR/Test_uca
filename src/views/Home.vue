@@ -75,7 +75,7 @@
         outlined
         rounded
         text
-        to="/schoolpolicy"
+        to="/policy"
       >
         View School Policy
       </v-btn>
