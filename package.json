@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-      "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build",
-      "lint": "vue-cli-service lint",
-      "deploy": "aws --profile vue-deployer --region us-west-2 s3 sync ./dist s3://uca-vue --delete"    
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "aws --profile vue-deployer --region us-west-2 s3 sync ./dist s3://uca-vue --delete"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -17,6 +17,7 @@
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
     "pdfjs-dist": "^2.12.313",
     "vue": "^2.6.11",
     "vue-expandable-image": "^0.1.0",
