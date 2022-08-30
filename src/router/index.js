@@ -53,7 +53,8 @@ const routes = [
     path: '/elementary',
     name: 'Elementary',
     component: elementary
-  }
+  },
+  { path: "*", redirect: "/" }
 ]
 
 const router = new VueRouter({

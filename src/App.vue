@@ -1,11 +1,9 @@
 <template id="app">
- 
-  <v-app>
-<Navbar />
-
-    <v-main class="mb-12">
-   <router-view class=" ma-8"/>
-    </v-main>
+   <v-app>
+    <Navbar />
+      <v-main class="mb-12">
+       <router-view class=" ma-8"/>
+      </v-main>
        <br/>
     <Footer  />
   </v-app>
