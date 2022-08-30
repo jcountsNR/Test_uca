@@ -6,9 +6,9 @@
   "license":"UNLICENSED",
   "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "yarn serve",
+    "build": "yarn build",
+    "lint": "yarn lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
