@@ -6,7 +6,6 @@ import about from '../views/About.vue'
 import apparel from '../views/apparel.vue'
 import convention from '../views/convention.vue'
 import basketball from '../views/basketball.vue'
-import policy from '../views/policy.vue'
 import jobs from '../views/jobs.vue'
 import elementary from '../views/elementary.vue'
 
@@ -41,10 +40,6 @@ const routes = [
     path: '/basketball',
     name: 'basketball',
     component: basketball
-  },  {
-    path: '/policy',
-    name: 'Policy',
-    component: policy
   },  {
     path: '/jobs',
     name: 'Jobs',
